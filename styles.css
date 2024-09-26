@@ -33,3 +33,46 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+
+/* New simplified classes */
+.header {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebar {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    width: 20%;
+    vertical-align: top;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:first-child {
+    color: white;
+}
+
+.main {
+    padding: 10px;
+}
+
+.image {
+    padding: 10px;
+}
+
+.footer {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+}
