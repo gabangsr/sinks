@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,18 +6,13 @@
 
 body {
     font-family: "Lato", sans-serif;
-
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
 h1, h2 {
     margin: 0;
-}
-
-.divider {
-    height: 4px;
-    background-color: rgba(0, 0, 0, 0.2);
-    margin: 0;
-    width: 100%;
 }
 
 .header-animation {
@@ -30,15 +24,11 @@ h1, h2 {
 }
 
 .header-animation h1 {
-    color: #333;
+    color: transparent;
     font-size: 8vw;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-}
-
-.header-animation h1:nth-child(1) {
-    color: transparent;
     -webkit-text-stroke: 2px #fff;
 }
 
@@ -65,19 +55,8 @@ h1, h2 {
 .header-description h3 {
     color: #fff;
     font-size: 1.5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Navbar Styling */
 .navbar {
     height: 50px;
     background-color: #333;
@@ -110,94 +89,54 @@ p {
 
 .navbar-list a:hover {
     background-color: #4DA6DA;
-    color: #fff; 
 }
 
-
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    margin-top: 2em;
-    border-radius: 8px;
-    position: relative;
+.content {
+    margin: 20px auto;
+    max-width: 2200px;
 }
 
 .gallery-item {
-    flex: 1 1 300px;
-    max-width: 45%;
-    text-align: center;
-    position: relative; 
-    transition: transform 0.1s ease-out; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    flex: 1 1 auto; 
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
-.gallery-item img {
-    width: 100%;
+.gallery-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.gallery-image {
+    width: 50%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; 
+    margin: 0 20px;
 }
 
-.gallery-item img:hover {
-    transform: scale(1.05);
+.item-description {
+    flex: 1;
+    text-align: left;
 }
 
-
-.gallery-item h2 {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    margin: 10px 0;
+.item-description h2 {
     font-size: 24px;
+    margin: 10px 0;
+    color: #30A9DE;
 }
 
-.gallery-item p {
+.item-description p {
     font-size: 16px;
     color: #555;
-    line-height: 1.5;
-}
-
-
-.cursor-follower {
-    position: absolute;
-    pointer-events: none; 
-    transition: transform 0.1s ease-out;
-}
-
-.cursor-follower img {
-    width: 50px;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    .image-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery-item {
-        max-width: 90%;
-    }
-
-    h1 {
-        font-size: 50px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 16px;
-    }
 }
 
 .footer-container {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
@@ -206,4 +145,56 @@ p {
     padding: 20px 0;
     color: #fff;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gallery-image {
+        width: 100%;
+        margin: 0;
+    }
+
+    .item-description {
+        width: 100%;
+    }
+
+    .sink-item, .feature-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.sink-types, .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.sink-item, .feature-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    flex: 1 1 30%;
+    max-width: 30%;
+    text-align: center;
+}
+
+.sink-image, .feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #30A9DE;
+    margin: 10px 0;
 }
