@@ -110,10 +110,9 @@ p {
 
 .navbar-list a:hover {
     background-color: #4DA6DA;
-    color: #fff; /* Change text color on hover */
+    color: #fff; 
 }
 
-/* Existing CSS code above */
 
 .image-gallery {
     display: flex;
@@ -125,15 +124,15 @@ p {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     margin-top: 2em;
     border-radius: 8px;
-    position: relative; /* Position relative for absolute children */
+    position: relative;
 }
 
 .gallery-item {
     flex: 1 1 300px;
     max-width: 45%;
     text-align: center;
-    position: relative; /* Enable absolute positioning for child elements */
-    transition: transform 0.1s ease-out; /* Smooth transition effect */
+    position: relative; 
+    transition: transform 0.1s ease-out; 
 }
 
 .gallery-item img {
@@ -141,11 +140,11 @@ p {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Smooth scaling */
+    transition: transform 0.3s ease; 
 }
 
 .gallery-item img:hover {
-    transform: scale(1.05); /* Scale image on hover */
+    transform: scale(1.05);
 }
 
 
@@ -162,19 +161,18 @@ p {
     line-height: 1.5;
 }
 
-/* Cursor Follower Styling */
+
 .cursor-follower {
     position: absolute;
-    pointer-events: none; /* Allow clicks through the image */
-    transition: transform 0.1s ease-out; /* Smooth movement */
+    pointer-events: none; 
+    transition: transform 0.1s ease-out;
 }
 
 .cursor-follower img {
-    width: 50px; /* Adjust size */
+    width: 50px;
     height: auto;
 }
 
-/* Media Query for Small Screens */
 @media (max-width: 768px) {
     .image-gallery {
         flex-direction: column;
@@ -199,13 +197,13 @@ p {
 }
 
 .footer-container {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
     height: 100px;
     font-size: 20px;
     background-color: #333;
     padding: 20px 0;
     color: #fff;
-    text-align: center; /* Ensure the text itself is centered */
+    text-align: center;
 }
