@@ -7,17 +7,18 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header-animation">
+    <header class="header-animation">
         <h1>SINKS R US</h1>
         <h1>SINKS R US</h1>
-    </div>
-    <div class="header-description">
+    </header>
+    <section class="header-description">
         <h3><em>"Learn more about our story and mission."</em></h3>
-    </div>
-    <div class="navbar">
+    </section>
+
+    <nav class="navbar">
         <div class="divider"></div>
         <ul class="navbar-list">
             <li><a href="index.html">Home</a></li>
@@ -26,27 +27,51 @@
             <li><a href="#">Features</a></li>
             <li><a id="openModal" href="javascript:void(0)">Contact Us</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="content">
-        <div class="content-wrapper">
-            <div class="gallery-item">
-                <img src="images/sinkfactory.webp" alt="Sink Image 1" class="gallery-image">
+    <main class="content">
+        <section class="content-wrapper">
+            <article class="gallery-item">
+                <img src="images/sinkfactory.webp" alt="Sink features" class="gallery-image left-image">
                 <div class="item-description">
                     <h2>Who We Are</h2>
                     <p>Sinks R Us has been providing premium sinks for homes and businesses for over a decade. Our commitment to quality and customer satisfaction sets us apart.</p>
-
+                </div>
+            </article>
+            <article class="gallery-item">
+                <img src="images/sinkfactory.webp" alt="Sink features" class="gallery-image right-image">
+                <div class="item-description">
                     <h2>Our Mission</h2>
                     <p>To offer a diverse range of sinks that cater to various styles and needs while ensuring top-notch quality and service.</p>
                 </div>
-            </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        &copy; 2024 Sinks R Us - Quality Sinks for Every Home
+    </footer>
+
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-button" id="closeModal" aria-label="Close">&times;</button>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
 
-    <div class="footer-container">
-        <footer>
-            &copy; 2024 Sinks R Us - Quality Sinks for Every Home
-        </footer>
-    </div>
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -17,3 +17,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target); 
+        }
+    });
+}
+
+
+const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.1  
+});
+
+
+const galleryItems = document.querySelectorAll('.gallery-item');
+galleryItems.forEach(item => {
+    observer.observe(item);
+});
+
+
